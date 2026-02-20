@@ -50,7 +50,7 @@ YAHOO_DISPLAY = {
 # Symbols that should go through Yahoo Finance (stocks, ETFs, commodities)
 # CoinGecko IDs are lowercase alpha; Yahoo symbols contain uppercase or special chars
 def is_yahoo_symbol(symbol):
-    return symbol != symbol.lower() or "=" in symbol or "." in symbol
+    return symbol != symbol.lower() or "=" in symbol or "." in symbol or "^" in symbol
 
 
 class FinanceTracker(BasePlugin):
